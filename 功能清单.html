@@ -1,0 +1,884 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>功能清单</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+/**
+ * NexT for Typora
+ * Brought to you by Bill Chen || https://github.com/BillChen2K/typora-theme-next
+ *
+ * - Want code ligatures for JetBrains Mono?
+ * - Search for `font-variant-ligatures: none;` and comment that line.
+ *
+ * - Want to change the font size in exported pdf?
+ * - Change the variable `--export-font-size` below.
+ **/
+
+:root {
+    --base-font-size: 16px;
+    --highlight-color: rgb(0, 160, 160);
+    --text-color: #333;
+    --headings-color: #262a30;
+    --export-font-size: 13px;
+    --select-text-bg-color: #262a30;
+    --select-text-font-color: #eee;
+}
+
+* {
+    /* Disable ligatures */
+    font-variant-ligatures: none;
+}
+
+
+/* latin-ext */
+
+/* latin */
+
+/* latin-ext */
+
+/* latin */
+
+/* latin-ext */
+
+/* latin */
+
+/* latin-ext */
+
+/* latin */
+
+/* latin-ext */
+
+/* latin */
+
+/* latin-ext */
+
+/* latin */
+
+html,
+body,
+#write {
+    color: var(--text-color);
+    font-size: var(--base-font-size);
+    background: #fcfcfc;
+    font-family: Overpass, "GlowSansSC", "Helvetica Neue", "pingfang sc", "microsoft yahei", sans-serif;
+    font-weight: 400;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    /* letter-spacing: -0.5px; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--headings-color);
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 20px 0 15px
+}
+
+.CodeMirror pre {
+    font-family: 'JetBrains Mono';
+    font-size: 0.95em;
+    line-height: 1.65em;
+}
+
+#write {
+    max-width: 914px;
+    text-align: justify;
+}
+
+#write>h1:first-child {
+    margin-top: 1.75rem;
+}
+
+#write>h2:first-child {
+    margin-top: 1.5rem;
+}
+
+#write>h3:first-child {
+    margin-top: 1rem;
+}
+
+#write>h4:first-child {
+    margin-top: 0.5rem;
+}
+
+h1 {
+    font-size: 2.5em
+}
+
+h2 {
+    font-size: 1.75 em
+}
+
+h3 {
+    font-size: 1.45em
+}
+
+h4 {
+    font-size: 1.25em
+}
+
+h5 {
+    font-size: 1.1em
+}
+
+h6 {
+    font-size: 1em;
+    font-weight: bold
+}
+
+#write code {
+    color: var(--highlight-color);
+}
+
+p {
+    color: var(--text-color);
+    line-height: 1.7rem;
+    margin: 0 0 8px;
+}
+
+#write ul {
+    line-height: 1.75rem;
+    margin-block-start: 0.6em;
+    margin-block-end: 0.6em;
+}
+
+#write ol li {
+    line-height: 1.75rem;
+    margin-block-start: 0.6em;
+    margin-block-end: 0.6em;
+}
+
+u {
+    text-decoration: none;
+    border-bottom: 1px solid #999;
+}
+
+#write>h3.md-focus:before {
+    left: -1.875rem;
+    top: 0.5rem;
+    padding: 2px;
+}
+
+#write>h4.md-focus:before {
+    left: -1.875rem;
+    top: 0.3125rem;
+    padding: 2px;
+}
+
+#write>h5.md-focus:before {
+    left: -1.875rem;
+    top: 0.25rem;
+    padding: 2px;
+}
+
+#write>h6.md-focus:before {
+    left: -1.875rem;
+    top: .125rem;
+    padding: 2px;
+}
+
+@media screen and (max-width: 48em) {
+    blockquote {
+        margin-left: 1rem;
+        margin-right: 0;
+        padding: 0.5em;
+    }
+    /* .h1,
+    h1 {
+        font-size: 2.827rem;
+    }
+    .h2,
+    h2 {
+        font-size: 1.999rem;
+    }
+    .h3,
+    h3 {
+        font-size: 1.413rem;
+    }
+    .h4,
+    h4 {
+        font-size: 1.250rem;
+    }
+    .h5,
+    h5 {
+        font-size: 1.150rem;
+    }
+    .h6,
+    h6 {
+        font-size: 1rem;
+    } */
+}
+
+a .md-def-url {
+    color: #262a30;
+}
+
+a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1em;
+    margin: 0 0 20px;
+    width: 100%;
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background: #f5f5f5
+}
+
+caption,
+td,
+th {
+    font-weight: 400;
+    padding: 8px;
+    text-align: left;
+    vertical-align: middle
+}
+
+table tr th {
+    border-bottom: 3px solid #ddd;
+    font-weight: 700;
+    padding-bottom: 10px;
+    background-color: var(--bg-color);
+}
+
+td,
+th {
+    border: 1px solid #ddd;
+}
+
+th {
+    font-weight: 700;
+    padding-bottom: 10px
+}
+
+td {
+    border-bottom-width: 1px
+}
+
+
+/* Inline Code */
+
+code,
+.md-fences {
+    background: #eee;
+    border-radius: 3px;
+    color: #555;
+    padding: 2px 4px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-family: 'JetBrains Mono';
+    font-size: 0.935em;
+}
+
+
+/* Code Blocks */
+
+.md-fences {
+    margin: 0 0 20px;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    padding: 0.4em 1em;
+    padding-top: 0.4em;
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.task-list-item {
+    padding-left: 2rem;
+}
+
+.task-list-item input {
+    top: 3px;
+}
+
+.task-list-item input {
+    outline: none;
+    margin-bottom: 0.5em;
+}
+
+.task-list-item input::before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid gray;
+    background-color: #fdfdfd;
+    margin-left: -0.1rem;
+    margin-right: 0.1rem;
+    margin-top: -0.9rem;
+}
+
+.task-list-item input:checked::before {
+    padding-left: 0.125em;
+    content: '✔';
+    /*◘*/
+    font-size: 0.8125rem;
+    line-height: 0.9375rem;
+    margin-top: -0.9rem;
+}
+
+
+/* Chrome 29+ */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    .task-list-item input:before {
+        margin-top: -0.2rem;
+    }
+    .task-list-item input:checked:before,
+    .task-list-item input[checked]:before {
+        margin-top: -0.2rem;
+    }
+}
+
+blockquote {
+    border-left: 4px solid #ddd;
+    color: #666;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0 15px
+}
+
+blockquote p {
+    color: #666
+}
+
+blockquote cite::before {
+    content: '-';
+    padding: 0 5px
+}
+
+
+/* #write pre.md-meta-block {
+    min-height: 30px;
+    background: #f8f8f8;
+    padding: 1.5em;
+    font-weight: 300;
+    font-size: 1em;
+    padding-bottom: 1.5em;
+    padding-top: 3em;
+    margin-top: -1.5em;
+    color: #999;
+    border-left: 1000px #f8f8f8 solid;
+    margin-left: -1000px;
+    border-right: 1000px #f8f8f8 solid;
+    margin-right: -1000px;
+    margin-bottom: 2em;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    font-family: 'JetBrains Mono';
+} */
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f1f1f1;
+    border: 0;
+    border-radius: 3px;
+    color: hsl(0, 0%, 53%);
+    margin-top: 0 !important;
+    margin-bottom: 2em;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    font-family: 'JetBrains Mono';
+}
+
+.MathJax_Display {
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+p.mathjax-block,
+.mathjax-block {
+    padding-bottom: 0;
+}
+
+.mathjax-block>.code-tooltip {
+    bottom: 5px;
+    box-shadow: none;
+}
+
+.md-image>.md-meta {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.md-image>img {
+    margin-top: 2px;
+}
+
+.md-image>.md-meta:first-of-type:before {
+    padding-left: 4px;
+}
+
+#typora-source {
+    color: #555;
+}
+
+
+/** ui for windows **/
+
+#md-searchpanel {
+    border-bottom: 1px solid #ccc;
+}
+
+#md-searchpanel .btn {
+    border: 1px solid #ccc;
+}
+
+#md-notification:before {
+    top: 14px;
+}
+
+#md-notification {
+    background: #eee;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #ccc;
+}
+
+#write>h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write>h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write>h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write>h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image>.md-meta {
+    border-radius: 3px;
+    padding: 2px 0 0 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 5px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #efefef;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+
+/** focus mode */
+
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+.file-tree-node {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.file-node-title {
+    padding-top: 2px;
+}
+
+.outline-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+/* 
+.modal-footer .btn-default,
+.modal-footer .btn-primary {
+    border: 2px solid #222;
+}
+
+
+
+#md-searchpanel .btn:not(.close-btn):hover {
+    background: #fff;
+    border-color: #222;
+    color: #222;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#md-searchpanel .btn:not(.close-btn) {
+    background: #222;
+    border-color: #222;
+    color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    transition-duration: .2s;
+}
+
+.searchpanel-search-option-btn {
+    border-radius: 0px;
+    border: 1px solid #222;
+} */
+
+/* Search panel & UI */
+
+#md-searchpanel .btn {
+    border: none;
+}
+
+#md-searchpanel input {
+    box-shadow: none;
+}
+
+.searchpanel-search-option-btn {
+    border-color: #aaa;
+    border-radius: 0;
+}
+
+.modal-dialog .btn {
+    background: #222;
+    border-width: 2px;
+    border-color: #222;
+    border-radius: 0;
+    color: #fff;
+    display: inline-block;
+    font-size: .875em;
+    line-height: 2rem;
+    padding: 0 20px;
+    margin: 5px;
+    text-decoration: none;
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out
+}
+
+.modal-dialog .btn:hover {
+    background: #eee;
+    border-color: #222;
+    color: #222;
+}
+
+
+/* Printing issue */
+
+.typora-export * {
+    -webkit-print-color-adjust: exact;
+}
+
+.typora-export p {
+    font-size: var(--export-font-size) !important;
+}
+
+.typora-export li {
+    font-size: var(--export-font-size);
+    line-height: 2rem;
+}
+
+.typora-export #write {
+    font-size: var(--export-font-size) !important;
+}
+
+table,
+pre {
+    page-break-inside: avoid;
+}
+
+pre {
+    word-wrap: break-word;
+}
+
+hr {
+    background-image: repeating-linear-gradient(-45deg, #ddd, #ddd 4px, transparent 4px, transparent 8px);
+    border: 0;
+    height: 3px;
+    margin: 40px 0
+}/**
+ * NexT for Typora
+ * Brought to you by Bill Chen || https://github.com/BillChen2K/typora-theme-next
+ *
+ * - Want code ligatures for JetBrains Mono?
+ * - Search for `font-variant-ligatures: none;` and comment that line.
+ **/
+
+@import "";
+* {
+    /* Disable ligatures */
+    font-variant-ligatures: none;
+}
+
+
+/* Helvetica Neue */
+
+html,
+body,
+#write {
+    font-family: HelveticaN, "GlowSansSC", "Helvetica Neue", "pingfang sc", "microsoft yahei", sans-serif;
+}
+
+p {
+    color: var(--text-color);
+    line-height: 1.55rem;
+    margin: 0 0 12.5px;
+}
+
+.task-list-item input::before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid gray;
+    background-color: #fdfdfd;
+    margin-left: -0.1rem;
+    margin-right: 0.1rem;
+    margin-top: -0.9rem;
+}
+
+.task-list-item input:checked::before {
+    padding-left: 0.125em;
+    content: '✔';
+    /*◘*/
+    font-size: 0.8125rem;
+    line-height: 0.9375rem;
+    margin-top: -0.5rem;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h2><a name="客户" class="md-header-anchor"></a><span>客户</span></h2><h3><a name="登录" class="md-header-anchor"></a><span>登录</span></h3><p><span>	</span><span>湘烟通扫码</span></p><p><span>		</span><span>页面正常显示登录二维码</span></p><p><span>			</span><span>用湘烟通APP扫码</span></p><p><span>				</span><span>确认登陆-&gt;页面跳转至首页</span></p><p><span>				</span><span>长时间不确认-&gt;二维码显示过期需重新扫码</span></p><p><span>				</span><span>取消登录-&gt;页面刷新正常显示二维码</span></p><p><span>		</span><span>长时间停留在该页</span></p><p><span>			</span><span>二维码显示过期需要刷新</span></p><p><span>	</span><span>admin密码登录</span></p><p><span>		</span><span>不输入账号-&gt;提示“账号不能为空，请重新输入。”</span></p><p><span>		</span><span>不输入密码-&gt;提示“密码不能为空，请重新输入。”</span></p><p><span>		</span><span>输入不存在的账户-&gt;提示“账号或密码错误，请重新输入。”</span></p><p><span>		</span><span>输入错误的密码-&gt;提示“账号或密码错误，请重新输入。”</span></p><p><span>		</span><span>输入正确的账户和密码-&gt;页面跳转至首页</span><span>		</span></p><h3><a name="界面展示" class="md-header-anchor"></a><span>界面展示</span></h3><p><span>	</span><span>进入首页后，一级菜单二级菜单均可正常显示。</span></p><p><span>	</span><span>刷新后，页面保持在原操作界面。</span></p><h3><a name="首页" class="md-header-anchor"></a><span>首页</span></h3><p><span>	</span><span>数据看板-&gt;数据显示正常，布局正常。</span></p><p><span>	</span><span>重点监管热力图-&gt;数据显示正常，布局正常。</span></p><p><span>	</span><span>卷烟案件情况-&gt;数据显示正常，布局正常。</span></p><p><span>	</span><span>在网零售户业态分布-&gt;数据显示正常，布局正常。</span></p><p><span>	</span><span>异常零售户拜访情况-&gt;数据显示正常，布局正常。</span></p><p><span>	</span><span>各网格户数与监管对象-&gt;数据显示正常，布局正常。</span></p><h3><a name="电子地图" class="md-header-anchor"></a><span>电子地图</span></h3><p><span>电子地图</span></p><p><span>	</span><span>地图显示正常，可正常缩小放大切换聚焦点、</span></p><p><span>	</span><span>图层——寄递单元、零售户、市场单元、重点监管对象（大户名单、黄名单、黑名单、异常户、灰名单）</span></p><p><span>		</span><span>图层默认勾选用户所在组织机构的重点监管对象</span></p><p><span>	</span><span>测距</span></p><p><span>		</span><span>点击地图开始选择起点，之后单击地图依次选择途径点，双击地图选择终点，起点标识“起点”，途径点标识为距离，终点标识“总长：距离”，轨迹旁出现标识“X”,点击轨迹从地图中消失</span></p><p><span>	</span><span>画点</span></p><p><span>		</span><span>单击地图，所在位置出现红色标记</span></p><p><span>		</span><span>再次点击该红色标记，弹出新增标记窗口</span></p><p><span>			</span><span>点位名称不能为空</span></p><p><span>			</span><span>所属图层不能为空</span></p><p><span>			</span><span>取消-&gt;新增标记窗口关闭</span></p><p><span>			</span><span>提交-&gt;提示“新增标记成功”，新增标记窗口关闭。</span></p><p><span>	</span><span>画面</span></p><p><span>		</span><span>点击地图开始选择面的一个顶点，之后单击地图依次选择其他顶点，右击地图选择面的最后一个顶点</span></p><p><span>拜访记录</span></p><p><span>	</span><span>页面显示正常，出现拜访记录列表。</span></p><p><span>	</span><span>根据被拜访对象、拜访人筛选数据查询正常。</span></p><p><span>	</span><span>单击拜访记录详情，弹出拜访详情窗口，出现拜访详情数据。</span></p><p><span>图层管理</span></p><p><span>	</span><span>页面显示正常，出现图层以及相关属性。</span></p><p><span>	</span><span>添加图层-&gt;弹出新增图层窗口</span></p><p><span>		</span><span>不选择图层名称-&gt;提示“图层名称不允许为空”</span></p><p><span>		</span><span>关闭-&gt;新增图层窗口关闭</span></p><p><span>		</span><span>保存-&gt;提示“新增成功”，新增图层窗口关闭</span></p><p><span>	</span><span>修改图层-&gt;弹出修改图层窗口</span></p><p><span>		</span><span>关闭-&gt;新增图层窗口关闭</span></p><p><span>		</span><span>保存-&gt;提示“修改成功”，修改图层窗口关闭</span></p><p><span>	</span><span>删除图层-&gt;弹出提示窗口“确定要删除该图层节点吗?”</span></p><p><span>		</span><span>取消-&gt;提示窗口关闭</span></p><p><span>		</span><span>确定-&gt;提示“删除成功”，提示窗口关闭</span></p><p><span>	</span><span>添加属性-&gt;弹出新增属性窗口</span></p><p><span>		</span><span>不输入属性编码-&gt;提示“属性编码不允许为空”</span></p><p><span>		</span><span>不输入属性名称-&gt;提示“属性名称不允许为空”</span></p><p><span>		</span><span>关闭-&gt;新增属性窗口关闭</span></p><p><span>		</span><span>保存-&gt;提示“新增成功”，新增属性窗口关闭</span></p><p><span>网格管理</span></p><p><span>	</span><span>页面显示正常，监管对象数据显示正常。</span></p><h3><a name="合理布局" class="md-header-anchor"></a><span>合理布局</span></h3><p><span>布局总览</span></p><p><span>	</span><span>地图及网格布局显示正常，可正常缩小放大切换聚焦点。</span></p><p><span>零售户合理性检测</span></p><p><span>	</span><span>地图及网格布局显示正常，可正常缩小放大切换聚焦点。</span></p><p><span>	</span><span>单击地图显示红色标记，</span></p><p><span>		</span><span>-&gt;提示“暂无网格信息”，弹出探查详情窗口。</span></p><p><span>		</span><span>-&gt;弹出探查详情窗口，显示探查详情信息。</span></p><h3><a name="案件数据库" class="md-header-anchor"></a><span>案件数据库</span></h3><p><span>数据查询</span></p><p><span>	</span><span>历史案件</span></p><p><span>		</span><span>打开历史案件菜单后，页面布局正常，表格数据显示正常。</span></p><p><span>		</span><span>依次可根据立案时间、案件编号、立案号、当事人、案由筛选案件数据。</span></p><p><span>		</span><span>可根据目前展示的表格数据导出至excel文件。</span></p><p><span>		</span><span>点击“详情”后弹出案件详情窗口，默认sheet选择基本信息，展示案件基本信息。</span></p><p><span>			</span><span>sheet切换到涉案人员，表格显示该案件涉案人员的信息。</span></p><p><span>				</span><span>点击详情，弹出涉案人员详情窗口，展示涉案人员详情信息。</span></p><p><span>					</span><span>不输入姓名或企业名-&gt;提示“姓名或企业名不能为空”</span></p><p><span>					</span><span>不选择性别-&gt;提示“性别不能为空”</span></p><p><span>					</span><span>不选择证件类型-&gt;提示“证件类型不能为空”</span></p><p><span>					</span><span>不输入案件中角色-&gt;提示“案件中角色不能为空”</span></p><p><span>					</span><span>不输入当事人类别-&gt;提示“当事人类别不能为空”</span></p><p><span>					</span><span>不输入是否烟草零售户-&gt;提示“是否烟草零售户不能为空”</span></p><p><span>					</span><span>不输入处罚-&gt;提示“是否处罚不能为空”</span></p><p><span>					</span><span>正常输入后，点击提交，提示“提交成功”，弹出窗口关闭。</span></p><p><span>					</span><span>点击关闭，弹窗关闭。</span></p><p><span>			</span><span>sheet切换到涉案物品，表格显示该案件涉案物品的信息。</span></p><p><span>			</span><span>sheet切换到涉案车辆，表格显示该案件涉案车辆的信息。</span></p><p><span>	</span><span>涉案人员</span></p><p><span>		</span><span>页面布局正常，表格数据显示正常。</span></p><p><span>		</span><span>依次可根据立案号、姓名或企业名、身份证号、当事人类别、案件中角色、是否烟草零售户、涉案人信息分类筛选案件数据。</span></p><p><span>		</span><span>可根据目前展示的表格数据导出至excel文件。</span></p><p><span>		</span><span>点击“详情”后弹出涉案人员详情窗口，默认sheet选择基本信息，展示案件基本信息。</span></p><p><span>			</span><span>点击详情，弹出涉案人员详情窗口，展示涉案人员详情信息。</span></p><p><span>				</span><span>不输入姓名或企业名-&gt;提示“姓名或企业名不能为空”</span></p><p><span>				</span><span>不选择性别-&gt;提示“性别不能为空”</span></p><p><span>				</span><span>不选择证件类型-&gt;提示“证件类型不能为空”</span></p><p><span>				</span><span>不输入身份证号-&gt;提示“身份证号不能为空”</span></p><p><span>				</span><span>不输入案件中角色-&gt;提示“案件中角色不能为空”</span></p><p><span>				</span><span>不输入当事人类别-&gt;提示“当事人类别不能为空”</span></p><p><span>				</span><span>不输入是否烟草零售户-&gt;提示“是否烟草零售户不能为空”</span></p><p><span>				</span><span>不输入处罚-&gt;提示“是否处罚不能为空”</span></p><p><span>				</span><span>输入后，点击提交，提示“提交成功”，弹出窗口关闭。</span></p><p><span>				</span><span>点击关闭，弹窗关闭。</span></p><p><span>	</span><span>涉案物品</span></p><p><span>		</span><span>页面布局正常，表格数据显示正常。</span></p><p><span>		</span><span>依次可根据立案号、物品品种筛选数据。</span></p><p><span>		</span><span>可根据目前展示的表格数据导出至excel文件。</span></p><p><span>	</span><span>涉案车辆</span></p><p><span>		</span><span>页面布局正常，表格数据显示正常。</span></p><p><span>		</span><span>依次可根据立案号、车牌号、车型、驾驶人、驾驶人身份证号筛选数据。</span></p><p><span>		</span><span>可根据目前展示的表格数据导出至excel文件。</span></p><p><span>		</span><span>点击详情后，弹出涉案车辆详情窗口。</span></p><p><span>			</span><span>不输入车牌号-&gt;提示“车牌号不能为空”</span></p><p><span>			</span><span>不输入驾驶人身份证号-&gt;提示“驾驶人身份证号不能为空”</span></p><p><span>			</span><span>不输入行驶证号码-&gt;提示“行驶证号码不能为空”</span><span>	</span></p><p><span>			</span><span>不输入车型-&gt;提示“车型不能为空”</span></p><p><span>			</span><span>不输入车辆颜色-&gt;提示“车辆颜色不能为空”</span></p><p><span>			</span><span>输入后，点击提交，提示“提交成功”，弹出窗口关闭。</span></p><p><span>			</span><span>点击关闭，弹窗关闭。</span></p><p><span>	</span><span>涉案快递</span></p><p><span>		</span><span>页面布局正常，表格数据显示正常。</span></p><p><span>		</span><span>依次可根据快递&amp;物流单号、快递物流公司、涉案类型、发货人、收货人、发货地址、收货地址筛选数据。</span></p><p><span>		</span><span>可根据目前展示的表格数据导出至excel文件。</span></p><p><span>		</span><span>点击详情后，弹出涉案快递详情窗口。</span></p><p><span>			</span><span>输入后，点击提交，提示“提交成功”，弹出窗口关闭。</span></p><p><span>			</span><span>点击关闭，弹窗关闭。</span></p><p><span>人员画像</span></p><p><span>		</span><span>页面布局正常，表格数据显示正常。</span></p><p><span>		</span><span>依次可根据姓名或企业名、身份证号筛选案件数据。</span></p><p><span>		</span><span>点击人物画像，弹出人物画像一览图页面。</span></p><p><span>区域画像</span></p><p><span>	</span><span>卷烟异流图</span></p><p><span>		</span><span>页面布局正常，表格数据显示正常。</span></p><p><span>	</span><span>省内卷烟异流图</span></p><p><span>		</span><span>页面布局正常，表格数据显示正常。</span></p><h3><a name="案件办理提醒" class="md-header-anchor"></a><span>案件办理提醒</span></h3><p><span>案件新增</span></p><p><span>	</span><span>基本信息</span></p><p><span>		</span><span>页面布局正常，表格数据显示正常。</span></p><p><span>		</span><span>依次可根据案件编号、立案号、当事人、案由、类型、立案时间筛选案件数据。</span></p><p><span>		</span><span>点击“新增”后弹出案件新增窗口，默认所有内容均需填充。</span><span>			</span></p><p><span>			</span><span>不选择立案日期-&gt;提示“立案日期不能为空”</span></p><p><span>			</span><span>立案日期默认展示时间格式为“yyyy年MM月dd日”</span></p><p><span>			</span><span>立案时间默认选择操作当天</span></p><p><span>			</span><span>不输入当事人-&gt;提示“当事人不能为空”</span></p><p><span>			</span><span>不输入案由-&gt;提示“案由不能为空”</span></p><p><span>			</span><span>不选择涉案类型-&gt;提示“涉案类型不能为空”</span></p><p><span>			</span><span>不输入查获地-&gt;提示“查获地不能为空”</span></p><p><span>			</span><span>查获地默认选择用户所在公司所在地址</span></p><p><span>			</span><span>不输入许可证号-&gt;提示“许可证号不能为空”</span></p><p><span>			</span><span>不输入第一责任人-&gt;提示“第一责任人不能为空”</span></p><p><span>			</span><span>不输入第二责任人-&gt;提示“第二责任人不能为空”</span></p><p><span>			</span><span>不选择案件性质-&gt;提示“案件性质不能为空”</span></p><p><span>			</span><span>案件性质默认选择“一般”</span></p><p><span>			</span><span>不选择是否快递案件-&gt;提示“是否快递案件不能为空”</span></p><p><span>			</span><span>不选择案件来源-&gt;提示“案件来源不能为空”</span></p><p><span>			</span><span>不选择查处环节-&gt;提示“查处环节不能为空”</span></p><p><span>			</span><span>不选择是否刑事案件-&gt;提示“是否刑事案件不能为空”</span></p><p><span>			</span><span>不选择涉案金额-&gt;提示“涉案金额不能为空”</span></p><p><span>			</span><span>不输入卷烟数量-&gt;提示“卷烟数量不能为空”</span></p><p><span>			</span><span>不输入罚款比例-&gt;提示“罚款比例不能为空”</span></p><p><span>			</span><span>罚款比例默认值为0、6.6（未当）、29.9（无证运输）</span></p><p><span>			</span><span>当案由为无主的时候，禁用罚款比例输入。</span></p><p><span>			</span><span>不输入罚款金额-&gt;提示“罚款金额不能为空”</span></p><p><span>			</span><span>禁用罚款金额，通过涉案金额和罚款比例计算得出</span></p><p><span>			</span><span>举报日期默认选择点击新增按钮时间，时间格式为“yyyy-MM-dd HH:mm”</span></p><p><span>			</span><span>勘验日期默认选择点击新增按钮时间，时间格式为“yyyy-MM-dd HH:mm”</span></p><p><span>			</span><span>不选择是否大要案-&gt;提示“是否大要案不能为空”</span></p><p><span>			</span><span>正常输入后，点击保存，提示“保存成功”，弹出窗口关闭。</span></p><p><span>			</span><span>点击关闭，弹窗关闭。</span></p><p><span>		</span><span>点击“详情”，弹出案件信息详情窗口，默认展示sheet为基本信息.</span></p><p><span>			</span><span>不选择立案日期-&gt;提示“立案日期不能为空”</span></p><p><span>			</span><span>立案日期默认展示时间格式为“yyyy年MM月dd日”</span></p><p><span>			</span><span>立案时间默认选择操作当天</span></p><p><span>			</span><span>不输入当事人-&gt;提示“当事人不能为空”</span></p><p><span>			</span><span>不输入案由-&gt;提示“案由不能为空”</span></p><p><span>			</span><span>不选择涉案类型-&gt;提示“涉案类型不能为空”</span></p><p><span>			</span><span>不输入查获地-&gt;提示“查获地不能为空”</span></p><p><span>			</span><span>查获地默认选择用户所在公司所在地址</span></p><p><span>			</span><span>不输入许可证号-&gt;提示“许可证号不能为空”</span></p><p><span>			</span><span>不输入第一责任人-&gt;提示“第一责任人不能为空”</span></p><p><span>			</span><span>不输入第二责任人-&gt;提示“第二责任人不能为空”</span></p><p><span>			</span><span>不选择案件性质-&gt;提示“案件性质不能为空”</span></p><p><span>			</span><span>案件性质默认选择“一般”</span></p><p><span>			</span><span>不选择是否快递案件-&gt;提示“是否快递案件不能为空”</span></p><p><span>			</span><span>不选择案件来源-&gt;提示“案件来源不能为空”</span></p><p><span>			</span><span>不选择查处环节-&gt;提示“查处环节不能为空”</span></p><p><span>			</span><span>不选择是否刑事案件-&gt;提示“是否刑事案件不能为空”</span></p><p><span>			</span><span>不选择涉案金额-&gt;提示“涉案金额不能为空”</span></p><p><span>			</span><span>不输入卷烟数量-&gt;提示“卷烟数量不能为空”</span></p><p><span>			</span><span>不输入罚款比例-&gt;提示“罚款比例不能为空”</span></p><p><span>			</span><span>罚款比例默认值为0、6.6（未当）、29.9（无证运输）</span></p><p><span>			</span><span>当案由为无主的时候，禁用罚款比例输入。</span></p><p><span>			</span><span>不输入罚款金额-&gt;提示“罚款金额不能为空”</span></p><p><span>			</span><span>禁用罚款金额，通过涉案金额和罚款比例计算得出</span></p><p><span>			</span><span>举报日期默认选择点击新增按钮时间，时间格式为“yyyy-MM-dd HH:mm”</span></p><p><span>			</span><span>勘验日期默认选择点击新增按钮时间，时间格式为“yyyy-MM-dd HH:mm”</span></p><p><span>			</span><span>不选择是否大要案-&gt;提示“是否大要案不能为空”</span></p><p><span>			</span><span>正常输入后，点击提交，提示“提交成功”，弹出窗口关闭。</span></p><p><span>			</span><span>点击关闭，弹窗关闭。</span></p><p><span>			</span><span>切换到涉案人员sheet，数据展示为空。</span></p><p><span>				</span><span>点击新增，弹出新增涉案人员窗口。</span><span>				</span></p><p><span>					</span><span>不输入姓名或企业名-&gt;提示“姓名或企业名不能为空”</span></p><p><span>					</span><span>不选择性别-&gt;提示“性别不能为空”</span></p><p><span>					</span><span>不选择证件类型-&gt;提示“证件类型不能为空”</span></p><p><span>					</span><span>不输入案件中角色-&gt;提示“案件中角色不能为空”</span></p><p><span>					</span><span>不输入当事人类别-&gt;提示“当事人类别不能为空”</span></p><p><span>					</span><span>不输入是否烟草零售户-&gt;提示“是否烟草零售户不能为空”</span></p><p><span>					</span><span>不输入处罚-&gt;提示“是否处罚不能为空”</span></p><p><span>					</span><span>输入后，点击提交，提示“提交成功”，弹出窗口关闭，涉案人员列表增加数据。</span></p><p><span>					</span><span>点击关闭，弹窗关闭。</span></p><p><span>			</span><span>切换到涉案物品sheet，数据展示为空。</span></p><p><span>				</span><span>点击新增，弹出新增涉案物品窗口，选择关联案件。</span><span>			</span></p><p><span>			</span><span>切换到涉案车辆sheet，数据展示为空。</span></p><p><span>				</span><span>点击新增，弹出新增涉案车辆窗口。</span><span>	</span></p><p><span>					</span><span>不输入车牌号-&gt;提示“车牌号不能为空”</span></p><p><span>					</span><span>不输入驾驶人身份证号-&gt;提示“驾驶人身份证号不能为空”</span></p><p><span>					</span><span>不输入行驶证号码-&gt;提示“行驶证号码不能为空”</span><span>	</span></p><p><span>					</span><span>不输入车型-&gt;提示“车型不能为空”</span></p><p><span>					</span><span>不输入车辆颜色-&gt;提示“车辆颜色不能为空”</span></p><p><span>					</span><span>输入后，点击提交，提示“提交成功”，弹出窗口关闭。</span></p><p><span>					</span><span>点击关闭，弹窗关闭。</span></p><p><span>			</span><span>切换到涉案快递sheet，数据展示为空。</span></p><p><span>				</span><span>点击新增，弹出新增涉案快递窗口。</span></p><p><span>					</span><span>不输入快递&amp;物流单号-&gt;提示“快递&amp;物流单号不能为空”</span></p><p><span>					</span><span>不输入快递物流公司-&gt;提示“快递物流公司不能为空”</span></p><p><span>					</span><span>不输入发货人-&gt;提示“发货人不能为空”</span><span>	</span></p><p><span>					</span><span>不输入发货人电话-&gt;提示“发货电话不能为空”</span></p><p><span>					</span><span>不输入收货人-&gt;提示“收货人不能为空”</span></p><p><span>					</span><span>不输入收货人电话-&gt;提示“收货人电话不能为空”</span></p><p><span>					</span><span>不输入查获人-&gt;提示“查获人不能为空”</span></p><p><span>					</span><span>查获人默认为当前操作用户</span></p><p><span>					</span><span>不输入物品名称-&gt;提示“物品名称不能为空”</span></p><p><span>					</span><span>不输入查获时间-&gt;提示“查获时间不能为空”</span></p><p><span>					</span><span>不输入查获金额-&gt;提示“查获金额不能为空”</span></p><p><span>					</span><span>不输入查货数量-&gt;提示“查货数量不能为空”</span></p><p><span>					</span><span>输入后，点击提交，提示“提交成功”，弹出窗口关闭。</span></p><p><span>					</span><span>点击关闭，弹窗关闭。</span></p><p><span>		</span><span>点击排班详情，弹出排版详情窗口。</span></p><p><span>			</span><span>依次展示，待办任务期望办理时间，具体任务节点名称，应办人，实办时间，实办人，办理备注，</span></p><p><span>待办任务</span></p><p><span>	</span><span>页面布局正常，展示数据正常。</span></p><p><span>	</span><span>可根据案件号筛选数据。</span></p><p><span>	</span><span>点击“处理”，系统弹出“处理详情”窗口。</span></p><p><span>		</span><span>输入处理详情后，点击提交，提示“提交成功”，弹出窗口关闭。</span></p><p><span>		</span><span>点击关闭，弹窗关闭。</span></p><h3><a name="文书制作" class="md-header-anchor"></a><span>文书制作</span></h3><p><span>文书管理</span></p><p><span>	</span><span>页面布局正常，表格数据显示正常。</span></p><p><span>	</span><span>依次可根据案件编号、立案号、当事人、案由、类型、立案时间、结案时间筛选案件数据。</span></p><p><span>	</span><span>点击文书生成，弹出文书生成窗口，展示可勾选的文书列表。</span></p><p><span>		</span><span>默认勾选所有文书。</span></p><p><span>		</span><span>不选择任何文书，提示“请至少选择一项文书”。</span></p><p><span>		</span><span>正常选择后，点击提交，提示“提交成功”，弹出窗口关闭，浏览器开始下载某文书。</span></p><p><span>		</span><span>点击关闭，弹窗关闭。</span></p><h3><a name="仓库管理" class="md-header-anchor"></a><span>仓库管理</span></h3><p><span>	</span><span>仓库管理</span></p><p><span>		</span><span>页面布局正常，表格数据显示正常。</span></p><p><span>		</span><span>可根据仓库名称筛选案件数据。</span></p><p><span>		</span><span>点击添加，弹出新增仓库窗口。</span></p><p><span>			</span><span>不输入仓库名称，提示“仓库名称不能为空”</span></p><p><span>			</span><span>不选择仓库类型，提示“仓库名称不能为空”</span></p><p><span>			</span><span>仓库类型默认选择“真烟库”</span></p><p><span>			</span><span>不输入仓库面积，提示“仓库面积不能为空”</span></p><p><span>			</span><span>不输入仓库地址，提示“仓库地址不能为空”</span></p><p><span>			</span><span>不输入仓库所属机构，提示“仓库所属机构不能为空”</span></p><p><span>			</span><span>在输入仓库管理员之前必须选择仓库所属机构。</span></p><p><span>			</span><span>不选择仓库状态，提示“仓库状态不能为空”</span></p><p><span>			</span><span>点击上传仓库图片，弹出文件选择框，点击选择进行上传。</span></p><p><span>			</span><span>正常选择后，点击提交，提示“提交成功”，弹出窗口关闭。</span></p><p><span>			</span><span>点击关闭，弹窗关闭。</span></p><p><span>	</span><span>物品管理</span></p><p><span>		</span><span>页面布局正常，表格数据显示正常。</span></p><p><span>		</span><span>可根据物品名称、物品编码筛选数据。</span></p><p><span>		</span><span>点击添加，弹出新增物品窗口。</span></p><p><span>			</span><span>不输入物品名称，提示“物品名称不能为空”</span></p><p><span>			</span><span>不输入201个字符的物品名称，不能输入</span></p><p><span>			</span><span>不输入条形码，提示“条形码不能为空”</span></p><p><span>			</span><span>不输入201个字符的条形码，不能输入</span></p><p><span>			</span><span>正常选择后，点击提交，提示“提交成功”，弹出窗口关闭。</span></p><p><span>			</span><span>点击关闭，弹窗关闭。</span></p><p><span>		</span><span>点击修改，弹出修改物品窗口。</span></p><p><span>			</span><span>不输入物品名称，提示“物品名称不能为空”</span></p><p><span>			</span><span>不输入201个字符的物品名称，不能输入</span></p><p><span>			</span><span>不输入条形码，提示“条形码不能为空”</span></p><p><span>			</span><span>不输入201个字符的条形码，不能输入</span></p><p><span>			</span><span>正常选择后，点击提交，提示“提交成功”，弹出窗口关闭。</span></p><p><span>			</span><span>点击关闭，弹窗关闭。</span></p><p><span>		</span><span>点击删除，弹出提示窗，提示“确定要删除该物品吗?”。</span></p><p><span>			</span><span>点击确定，提示“删除成功”，弹出窗口关闭。</span></p><p><span>			</span><span>点击关闭，弹窗关闭。</span></p><p><span>	</span><span>入库管理</span></p><p><span>		</span><span>页面布局正常，表格数据显示正常。</span></p><p><span>		</span><span>可根据仓库、单据编号、单据日期筛选数据。</span></p><p><span>		</span><span>点击添加，弹出入库记录详情。</span></p><p><span>			</span><span>...</span></p><p><span>	</span><span>出库管理</span></p><p><span>		</span><span>页面布局正常，表格数据显示正常。</span></p><p><span>		</span><span>可根据仓库、单据编号、单据日期筛选数据。</span></p><p><span>		</span><span>点击一键出库，弹出入库记录详情。</span></p><p><span>			</span><span>...</span></p><h3><a name="智能客服" class="md-header-anchor"></a><span>智能客服</span></h3><h3><a name="智能报表" class="md-header-anchor"></a><span>智能报表</span></h3><h2><a name="后台管理" class="md-header-anchor"></a><span>后台管理</span></h2><h3><a name="登录-n407" class="md-header-anchor"></a><span>登录</span></h3><p><span>	</span><span>账号密码登录</span></p><p><span>		</span><span>不输入账号-&gt;提示“账号不能为空，请重新输入。”</span></p><p><span>		</span><span>不输入密码-&gt;提示“密码不能为空，请重新输入。”</span></p><p><span>		</span><span>输入不存在的账户-&gt;提示“账号或密码错误，请重新输入。”</span></p><p><span>		</span><span>输入错误的密码-&gt;提示“账号或密码错误，请重新输入。”</span></p><p><span>		</span><span>输入正确的账户和密码-&gt;页面跳转至首页</span></p><p><span>	</span><span>退出系统</span></p><p><span>		</span><span>点击-&gt;提示“您确定要退出系统吗？”</span></p><p><span>			</span><span>确定-&gt;退出系统跳转至登陆页面</span></p><p><span>			</span><span>取消-&gt;关闭弹窗回到操作窗口</span></p><p><span>	</span><span>密码修改</span></p><p><span>		</span><span>不输入旧密码-&gt;提示“旧密码不能为空，请重新输入。”</span></p><p><span>		</span><span>输入错误的旧密码-&gt;提示“旧密码输入不正确，请重新输入。”</span></p><p><span>		</span><span>不输入新密码-&gt;提示“新密码不能为空，请重新输入。”</span></p><p><span>		</span><span>不输入确认密码-&gt;提示“确认密码不能为空，请重新输入。”</span></p><p><span>		</span><span>输入不同的新密码-&gt;您两次输入的密码不同，请重新输入。</span></p><p><span>		</span><span>输入正确的旧密码和相同的新密码-&gt;页面跳转回到操作页面。</span></p><h3><a name="界面展示-n425" class="md-header-anchor"></a><span>界面展示</span></h3><p><span>	</span><span>进入首页后，一级菜单二级菜单均可正常显示。</span></p><p><span>	</span><span>刷新后，页面保持在原操作界面。</span></p><h3><a name="系统管理" class="md-header-anchor"></a><span>系统管理</span></h3><h4><a name="系统权限" class="md-header-anchor"></a><span>系统权限</span></h4><p><span>	</span><span>资源管理</span></p><p><span>		</span><span>页面显示正常。</span></p><p><span>		</span><span>数据查询显示正常。</span></p><p><span>		</span><span>添加</span></p><p><span>			</span><span>不选择资源节点-&gt;提示“请选择一个上级资源节点”。</span></p><p><span>			</span><span>选择资源根节点或模块类型资源节点</span></p><p><span>				</span><span>不输入资源名称-&gt;提示“资源名称不能为空”</span></p><p><span>				</span><span>输入51个字符的资源名称-&gt;不能输入</span></p><p><span>				</span><span>输入51个字符的资源编码-&gt;不能输入</span></p><p><span>				</span><span>输入重复的资源编码-&gt;提示“您输入的资源编码存在，请重新输入。”</span></p><p><span>				</span><span>输入101个字符的URL-&gt;不能输入</span></p><p><span>				</span><span>选择类型为系统-&gt;提示“当类型不为系统时，资源编码不能为空”</span></p><p><span>				</span><span>选择类型为页面-&gt;提示“当类型为页面时，URL不能为空”</span></p><p><span>			</span><span>选择页面类型资源节点-&gt;提示“页面类型资源不允许增加子资源”</span></p><p><span>			</span><span>选择功能类型资源节点-&gt;提示“功能类型资源不允许增加子资源”</span></p><p><span>			</span><span>保存-&gt;提示“资源节点添加成功”，添加资源窗口关闭。</span></p><p><span>			</span><span>关闭-&gt;添加资源窗口关闭。</span></p><p><span>		</span><span>修改</span></p><p><span>			</span><span>不选择资源节点-&gt;提示“请选择需要修改的资源节点”。</span></p><p><span>				</span><span>不输入资源名称-&gt;提示“资源名称不能为空”</span></p><p><span>				</span><span>输入51个字符的资源名称-&gt;不能输入</span></p><p><span>				</span><span>输入51个字符的资源编码-&gt;不能输入</span></p><p><span>				</span><span>输入重复的资源编码-&gt;提示“您输入的资源编码存在，请重新输入。”</span></p><p><span>				</span><span>输入101个字符的URL-&gt;不能输入</span></p><p><span>				</span><span>选择类型为系统-&gt;提示“当类型不为系统时，资源编码不能为空”</span></p><p><span>				</span><span>选择类型为页面-&gt;提示“当类型为页面时，URL不能为空”</span></p><p><span>				</span><span>保存-&gt;提示&quot;资源节点修改成功&quot;，修改资源窗口关闭。</span></p><p><span>				</span><span>关闭-&gt;修改资源窗口关闭。</span></p><p><span>		</span><span>删除</span></p><p><span>			</span><span>不选择资源节点-&gt;提示“请选择需要删除的资源节点”。</span></p><p><span>			</span><span>删除有关联角色的资源节点-&gt;不允许删除</span></p><p><span>			</span><span>删除-&gt;提示“删除该资源将删除该资源所有您确定子孙资源和所有相关的权限点，确定要删除该资源吗?”</span></p><p><span>				</span><span>确定-&gt;提示“资源删除成功”，该资源节点消失。</span></p><p><span>				</span><span>取消-&gt;提示弹窗关闭。</span></p><p><span>		</span><span>排序</span></p><p><span>			</span><span>不选择资源节点-&gt;提示“ 请选择需要排序的资源节点”。</span></p><p><span>			</span><span>选择带有子菜单的资源节点-&gt;弹出排序窗口，页面布局正常</span></p><p><span>			</span><span>选择没有子菜单的资源节点-&gt;该菜单资源节点下无子菜单资源节点，不能完成排序操作。</span></p><p><span>			</span><span>不选择资源-&gt;提示“请选择需要移动的菜单资源记录”</span></p><p><span>				</span><span>点击资源-&gt;序号变为对勾</span></p><p><span>					</span><span>上移</span></p><p><span>						</span><span>所选择的资源向上移动一个单位</span></p><p><span>					</span><span>下移</span></p><p><span>						</span><span>所选择的资源向下移动一个单位</span></p><p><span>			</span><span>保存-&gt;提示“资源排序成功”，排序结果保存至菜单，资源排序窗口关闭。</span></p><p><span>			</span><span>关闭-&gt;资源排序窗口关闭。</span></p><p><span>	</span><span>权限点管理</span></p><p><span>		</span><span>增加</span></p><p><span>		</span><span>修改</span></p><p><span>		</span><span>删除</span></p><p><span>	</span><span>角色管理</span></p><p><span>	</span><span>用户管理</span></p><h4><a name="基础数据" class="md-header-anchor"></a><span>基础数据</span></h4><p><span>	</span><span>参数管理</span></p><p><span>	</span><span>系统字典</span></p><p><span>	</span><span>地区管理</span></p><h4><a name="系统监控" class="md-header-anchor"></a><span>系统监控</span></h4><p><span>	</span><span>系统日志</span></p></div>
+</body>
+</html>
