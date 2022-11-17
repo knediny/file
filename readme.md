@@ -1,11 +1,3 @@
-# note
+the website on the internet about zwpride's file
 
-1、每日的小心情（大多在电脑前...
-
-1.1、知乎
-
-1.2、github
-
-2、一些好用的工具
-
-3、一些学习的记录（整理或未整理
+Thanks for vercel and github! 
